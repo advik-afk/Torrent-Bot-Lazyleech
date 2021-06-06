@@ -8,7 +8,9 @@
 “	Telegram Torrent Leeching Bot by Some Weebs ” 
 </p>
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/advik-afk/Torrent-Bot-Lazyleech)
+# Deploy to Heroku 💜
+## Deploy on Your Own Risks... Your account may be suspend..
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Cooldude0340/Torrent-Bot-Lazyleech)
 
 
 # Table of Content
