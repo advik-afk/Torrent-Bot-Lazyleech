@@ -37,7 +37,7 @@ async def upload_worker():
         try:
             message_identifier = (reply.chat.id, reply.message_id)
             if SendAsZipFlag not in flags:
-                asyncio.create_task(reply.edit_text('Download successful, uploading files...'))
+                asyncio.create_task(reply.edit_text('Download successful, uploading files... 🌝'))
             task = asyncio.create_task(_upload_worker(client, message, reply, torrent_info, user_id, flags))
             upload_statuses[message_identifier] = task, user_id
             await task
@@ -86,7 +86,7 @@ async def _upload_worker(client, message, reply, torrent_info, user_id, flags):
                     for file in torrent_info['files']:
                         zipf.write(file['path'], file['path'].replace(os.path.join(torrent_info['dir'], ''), '', 1))
             await asyncio.gather(reply.edit_text('Download successful, zipping files...'), client.loop.run_in_executor(None, _zip_files))
-            asyncio.create_task(reply.edit_text('Download successful, uploading files...'))
+            asyncio.create_task(reply.edit_text('Download successful, uploading files... 🌝'))
             files[filepath] = filename
         else:
             for file in torrent_info['files']:
@@ -169,7 +169,7 @@ async def _upload_file(client, message, reply, filename, filepath, force_documen
                     if a:
                         async with upload_tamper_lock:
                             upload_waits.pop(upload_identifier)
-                            upload_wait = await reply.reply_text(f'Upload of {html.escape(filename)} will start in {PROGRESS_UPDATE_DELAY}s')
+                            upload_wait = await reply.reply_text(f'Upload of {html.escape(filename)} will start in {PROGRESS_UPDATE_DELAY}s >_<')
                             upload_identifier = (upload_wait.chat.id, upload_wait.message_id)
                             upload_waits[upload_identifier] = user_id, worker_identifier
                         for _ in range(PROGRESS_UPDATE_DELAY):
@@ -254,7 +254,7 @@ async def progress_callback(current, total, client, reply, filename, user_id):
         text = f'''<b>Uploading</b> {html.escape(filename)}
 <code>{html.escape(return_progress_string(current, total))}</code>
 <b>✦ Completed:</b> {format_bytes(current)} of {format_bytes(total)}
-<b>✦ Speed:</b> {upload_speed}/s
+<b>✦ Speed:</b> {upload_speed}/s 🔺
 <b>✦ ETA:</b> {calculate_eta(current, total, start_time)}'''
         if prevtext != text:
             await reply.edit_text(text)
