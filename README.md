@@ -10,7 +10,7 @@
 
 # Deploy to Heroku 💜
 ## Deploy on Your Own Risks... Your account may be suspend..
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Cooldude0340/Torrent-Bot-Lazyleech)
+[![Deploy](https://www.hero)
 
 
 # Table of Content
