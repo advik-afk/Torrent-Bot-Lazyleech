@@ -39,7 +39,7 @@ async def help_cmd(client, message):
             break
     else:
         module = None
-        text = 'Select the module you want help with'
+        text = 'Select the module you want help with 👀'
         buttons = []
         to_append = []
         for internal_name in help_dict:
@@ -79,7 +79,7 @@ async def help_back(client, callback_query):
                     to_append = []
             if to_append:
                 buttons.append(to_append)
-            await message.edit_text('Select the module you want help with.', reply_markup=InlineKeyboardMarkup(buttons))
+            await message.edit_text('Select the module you want help with. 👀', reply_markup=InlineKeyboardMarkup(buttons))
             callback_info[message_identifier] = user_id, None
     await callback_query.answer()
 
