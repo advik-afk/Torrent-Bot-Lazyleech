@@ -3,3 +3,6 @@ pyrogram
 tgcrypto
 natsort
 aiohttp
+html-telegraph-poster>=0.2.31
+youtube-dl
+torrentool==1.1.0
