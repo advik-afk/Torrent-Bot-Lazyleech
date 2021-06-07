@@ -10,7 +10,7 @@
 
 # Deploy to Heroku 💜
 ## Deploy on Your Own Risks... Your account may be suspend..
-[![Deploy](https://www.hero)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://telegra.ph/file/040f883b26da94f25ec1e.jpg)
 
 
 # Table of Content
